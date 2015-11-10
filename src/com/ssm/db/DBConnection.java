@@ -8,15 +8,9 @@ import com.ssm.sys.Config;
 import com.ssm.util.PropertyUtil;
 
 public class DBConnection {
-//	
-//	private String url="jdbc:mysql://127.0.0.1:3306/group?useUnicode=true&characterEncoding=UTF-8";
-//	private String username="root";
-//	private String userpassword="123456";
-
 	private String url= PropertyUtil.getValue("db.properties","url");
 	private String username= PropertyUtil.getValue("db.properties","username");
 	private String userpassword=PropertyUtil.getValue("db.properties","userpassword");
-	
 	static{
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -24,7 +18,6 @@ public class DBConnection {
 			e.printStackTrace();
 		}
 	}
-	
 	public Connection getCon(){
 		Connection con=null;
 		try {
