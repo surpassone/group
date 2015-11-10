@@ -13,9 +13,9 @@ public class DBConnection {
 //	private String username="root";
 //	private String userpassword="123456";
 
-	private String url= PropertyUtil.getKey("db.properties","url");
-	private String username= PropertyUtil.getKey("db.properties","username");
-	private String userpassword=PropertyUtil.getKey("db.properties","userpassword");
+	private String url= PropertyUtil.getValue("db.properties","url");
+	private String username= PropertyUtil.getValue("db.properties","username");
+	private String userpassword=PropertyUtil.getValue("db.properties","userpassword");
 	
 	static{
 		try {
