@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ssm.Bean.UserBean;
+import com.ssm.Bean.paymentsDayBean;
 import com.ssm.dao.costmanageDao.paymentsDayDao;
 import com.ssm.dao.costmanageDao.impl.paymentsDayDaoImpl;
 
@@ -25,8 +26,13 @@ public class CostmanageController {
 	paymentsDayDao pdd = new paymentsDayDaoImpl();
 
 	@RequestMapping("save.do")
-	public ModelAndView testLogin() {
+	public ModelAndView testLogin(HttpServletRequest request,
+			HttpServletResponse response) {
 		ModelAndView model = new ModelAndView("jsp/loginError");
+		String pay_mount =request.getParameter("mount");
+		paymentsDayBean bean = new paymentsDayBean();
+		bean.setPay_mount(Double.parseDouble(pay_mount));
+		pdd.AddPayments(bean);
 		return model;
 
 	}

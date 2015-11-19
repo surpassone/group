@@ -51,4 +51,32 @@
 		/WEB-INF/spring-servlet.xml,/WEB-INF/sp-db.xml
 		</param-value>
 	</context-param>
+	
+	
+	<!-- 配置过滤器防止sql注入或者跨站录入的攻击 -->
+	<filter>
+		<filter-name>charFilter</filter-name>
+		<filter-class>com.ssm.filter.CharFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<!-- 合法的字符 -->
+		<init-param>
+			<param-name>legalNames</param-name>
+			<param-value>content1,ver</param-value>
+		</init-param>
+		<!-- 非法的字符 -->
+		<init-param>
+			<param-name>illegalChars</param-name>
+			<param-value>|,$,',&quot;,\',\&quot;,&lt;,>,(,),+,CR,LF,\&quot;,&quot;,\</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>charFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+	
 </web-app>

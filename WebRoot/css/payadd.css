@@ -1,7 +1,7 @@
 *{margin:0;padding:0;}
 
 body{
-  background:#567;
+  background:url('../images/backimage.jpg')  repeat-x;
   font-family:'Open Sans',sans-serif;
 }
 
@@ -51,12 +51,20 @@ body{
   color:#fff;
 }
 
+#da{
+  padding:20px 0;
+  font-size:100%;
+  font-weight:80;
+  text-align:left;
+  color:#3399cc;
+}
+
 form{
   background:#f0f0f0;
   padding:6% 4%;
 }
 
-input[type="text"]{
+input[type="number"]{
   width:92%;
   background:#fff;
   margin-bottom:4%;

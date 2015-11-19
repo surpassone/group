@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//WebRoot/jsp/login/welcome.jsp=UTF-8
+encoding//WebRoot/jsp/loginError.jsp=UTF-8
+encoding//WebRoot/jsp/timeline/timeline.jsp=UTF-8
 encoding/<project>=UTF-8

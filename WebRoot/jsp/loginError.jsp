@@ -30,5 +30,7 @@ function(){
   
   <body>
    <input type="text" value="${list.size()}" />
+   
+   记账成功
   </body>
 </html>
